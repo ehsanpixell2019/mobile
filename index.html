@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تعمیرات تخصصی موبایل</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:20px;background:#0b1220;color:#fff;font-family:Tahoma,Arial,sans-serif}
+header{text-align:center;padding:20px 0}
+.logo{font-size:38px;font-weight:bold;text-shadow:0 0 15px #7c9cff}
+h1{font-size:23px;line-height:1.8}
+.subtitle{color:#a9b4c8;line-height:2}
+.status{display:inline-block;background:#12352d;color:#36db88;padding:10px 20px;border-radius:30px}
+.buttons{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:25px 0}
+.btn{padding:18px 5px;text-align:center;color:white;text-decoration:none;border-radius:20px;font-size:16px;font-weight:bold;line-height:2}
+.map{background:#109b8b}.instagram{background:#d62976}.whatsapp{background:#16a34a}.phone{background:#24418f}
+.card{background:#141f36;border:1px solid #293858;border-radius:24px;padding:20px;margin-bottom:18px}
+.card h2{font-size:20px;line-height:1.8}
+.row{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px dashed #34415b;line-height:1.8}
+.row:last-child{border:0}
+.number{direction:ltr;text-align:center;font-size:21px;font-weight:bold;margin:22px 0}
+.copy{width:100%;padding:15px;background:#14b8a6;color:white;border:0;border-radius:14px;font-size:17px}
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.service{border:1px solid #293858;border-radius:18px;text-align:center;padding:15px 5px;line-height:2}
+.icon{font-size:30px}
+footer{text-align:center;color:#9caac1;padding:20px}
+@media(min-width:600px){body{max-width:750px;margin:auto}.buttons{grid-template-columns:repeat(4,1fr)}.services{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">QRCODE</div>
+<h1>تعمیرات تخصصی موبایل من</h1>
+<p class="subtitle">تعمیرات تخصصی موبایل، نرم‌افزار و سخت‌افزار</p>
+<div class="status">🟢 آماده خدمت‌رسانی</div>
+</header>
+
+<div class="buttons">
+<a class="btn map" href="https://www.google.com/maps" target="_blank">📍<br>مسیریابی</a>
+<a class="btn instagram" href="https://www.instagram.com/" target="_blank">📸<br>اینستاگرام</a>
+<a class="btn whatsapp" href="https://wa.me/" target="_blank">💬<br>واتساپ</a>
+<a class="btn phone" href="tel:+989120000000">📞<br>تماس</a>
+</div>
+
+<section class="card">
+<h2>🕒 ساعات کاری</h2>
+<div class="row"><span>شنبه تا پنجشنبه، صبح</span><strong>۸ تا ۱۳</strong></div>
+<div class="row"><span>شنبه تا پنجشنبه، عصر</span><strong>۱۵:۳۰ تا ۲۱</strong></div>
+<div class="row"><span>جمعه و تعطیلات</span><strong>با هماهنگی قبلی</strong></div>
+</section>
+
+<section class="card">
+<h2>💳 کارت به کارت</h2>
+<div class="number" id="cardNumber">0000000000000000</div>
+<button class="copy" onclick="copyCard()">📋 کپی شماره کارت</button>
+</section>
+
+<section class="card">
+<h2>🛠️ خدمات تعمیرات</h2>
+<div class="services">
+<div class="service"><div class="icon">🔋</div>تعویض باتری</div>
+<div class="service"><div class="icon">📱</div>تاچ و صفحه‌نمایش</div>
+<div class="service"><div class="icon">🪟</div>گلس و ال‌سی‌دی</div>
+<div class="service"><div class="icon">🔌</div>شارژ و کانکتور</div>
+<div class="service"><div class="icon">🔄</div>آپدیت و ریست</div>
+<div class="service"><div class="icon">⚙️</div>نرم‌افزار و فلش</div>
+</div>
+</section>
+
+<footer>طراحی شده با ❤️</footer>
+
+<script>
+function copyCard(){
+const number=document.getElementById("cardNumber").innerText.trim();
+navigator.clipboard.writeText(number)
+.then(()=>alert("شماره کارت کپی شد"))
+.catch(()=>alert("لطفاً شماره را دستی کپی کنید"));
+}
+</script>
+</body>
+</html>
